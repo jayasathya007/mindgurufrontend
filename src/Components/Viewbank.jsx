@@ -7,7 +7,7 @@ const Viewquestionbanks = () => {
 
   const fetchQuestionBanks = async () => {
     try {
-      const response = await axios.get("https://mindgurubackend.onrender.com/get_list_banks/");
+      const response = await axios.get("http://localhost:8000/get_list_banks/");
       setQuestionBanks(response.data);
     } catch (error) {
       console.error("Error fetching question banks", error);
@@ -26,7 +26,7 @@ const Viewquestionbanks = () => {
           <div className="card" key={pdf.id}>
             <h3>{pdf.title}</h3>
             <a
-              href={'https://mindgurubackend.onrender.com${pdf.pdf_file}'}
+              href={`http://localhost:8000${pdf.pdf_file}`}
               target="_blank"
               rel="noopener noreferrer"
               className="view-button"
