@@ -8,7 +8,7 @@
 //   const[Marks, setMarks] = useState([])
 
 //   useEffect(() => {
-//     fetch('http://localhost:8000/student-reports/')
+//     fetch('https://mindgurubackend.onrender.com/student-reports')
 //       .then((response) => response.json())
 //       .then((data) => setReports(data))
 //       .catch((error) => console.error('Error fetching data:', error));
@@ -68,7 +68,7 @@ const StudentReports = () => {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch('http://localhost:8000/student-reports/')
+    fetch('https://mindgurubackend.onrender.com/student-reports')
       .then((response) => response.json())
       .then((data) => setReports(data))
       .catch((error) => console.error('Error fetching data:', error));
